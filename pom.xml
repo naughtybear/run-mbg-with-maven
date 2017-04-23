@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.zzh</groupId>
+    <artifactId>mbg-sample</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <jdbcDriver.classpath>E:\Work\tool-lib\mysql-connector-java-5.1.41.jar</jdbcDriver.classpath>
+        <mybatis.generator.jdbcDriver>com.mysql.jdbc.Driver</mybatis.generator.jdbcDriver>
+        <mybatis.generator.jdbcURL>jdbc:mysql://192.168.99.100:3306/test?characterEncoding=utf8&amp;useSSL=false</mybatis.generator.jdbcURL>
+        <mybatis.generator.jdbcUserId>root</mybatis.generator.jdbcUserId>
+        <mybatis.generator.jdbcPassword>test123456</mybatis.generator.jdbcPassword>
+
+        <!-- Mapper/SqlProvider -->
+        <java.client.target.dir>E:\Work\projs\java\spring-boot-sample\src\main\java</java.client.target.dir>
+        <java.client.target.package>com.zzh.springboot.demo.dao.mapper</java.client.target.package>
+
+        <!-- Model -->
+        <model.target.dir>E:\Work\projs\java\spring-boot-sample\src\main\java</model.target.dir>
+        <model.target.package>com.zzh.springboot.demo.model</model.target.package>
+
+        <!-- XML Mapping file -->
+        <mapper.target.dir>E:\Work\projs\java\spring-boot-sample\src\main\resources\mybatis</mapper.target.dir>
+        <mapper.target.packge>mapper</mapper.target.packge>
+
+        <mybatis.generator.tableNames>student,course_score</mybatis.generator.tableNames>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.mybatis.generator</groupId>
+                <artifactId>mybatis-generator-maven-plugin</artifactId>
+                <version>1.3.5</version>
+                <configuration>
+                    <configurationFile>src/main/resources/generatorConfig.xml</configurationFile>
+                    <verbose>true</verbose>
+                    <overwrite>true</overwrite>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>mysql</groupId>
+                        <artifactId>mysql-connector-java</artifactId>
+                        <version>5.1.41</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.mybatis</groupId>
+                        <artifactId>mybatis</artifactId>
+                        <version>3.4.0</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.mybatis.generator</groupId>
+                        <artifactId>mybatis-generator-core</artifactId>
+                        <version>1.3.5</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>com.zzh</groupId>
+                        <artifactId>mbg-plugin</artifactId>
+                        <version>1.0-SNAPSHOT</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
