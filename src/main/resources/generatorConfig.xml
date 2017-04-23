@@ -29,16 +29,16 @@
             <property name="forceBigDecimals" value="false" />
         </javaTypeResolver>
 
-        <javaModelGenerator targetPackage="com.zzh.springboot.demo.model" targetProject="E:\Work\projs\java\spring-boot-sample\src\main\java">
+        <javaModelGenerator targetPackage="${model.target.package}" targetProject="${model.target.dir}">
             <property name="enableSubPackages" value="true" />
             <property name="trimStrings" value="true" />
         </javaModelGenerator>
 
-        <sqlMapGenerator targetPackage="mapper" targetProject="E:\Work\projs\java\spring-boot-sample\src\main\resources\mybatis">
+        <sqlMapGenerator targetPackage="${mapper.target.packge}" targetProject="${mapper.target.dir}">
             <property name="enableSubPackages" value="true" />
         </sqlMapGenerator>
 
-        <javaClientGenerator type="ANNOTATEDMAPPER" targetPackage="com.zzh.springboot.demo.dao.mapper" targetProject="E:\Work\projs\java\spring-boot-sample\src\main\java">
+        <javaClientGenerator type="ANNOTATEDMAPPER" targetPackage="${java.client.target.package}" targetProject="${java.client.target.dir}">
             <property name="enableSubPackages" value="true" />
         </javaClientGenerator>
 
