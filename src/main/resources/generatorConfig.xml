@@ -13,6 +13,7 @@
         <plugin type="org.mybatis.generator.plugins.RowBoundsPlugin" />
         <plugin type="com.zzh.mbg.plugin.MysqlBatchInsertPlugin" />
         <plugin type="com.zzh.mbg.plugin.MysqlBatchUpdatePlugin" />
+        <plugin type="com.zzh.mbg.plugin.MysqlBatchUpdateSelectivePlugin" />
 
         <commentGenerator type="com.zzh.mbg.GeneralCommentGenerator">
             <!--<property name="suppressAllComments" value="true" />-->
