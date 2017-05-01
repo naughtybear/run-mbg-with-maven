@@ -25,7 +25,7 @@
         <mybatis.generator.tableNames>student,course_score</mybatis.generator.tableNames>
     </properties>
 ```
-您可以通过修改一些属性定义来满足自己的项目需求
+**您可以通过修改一些属性定义来满足自己的项目需求**
 
 ### 2. MBG配置文件 - src/main/resources/generatorConfig.xml
 其中的大部分配置依赖于pom.xml中定义的属性，推荐经常容易变动的属性以pom中的属性方式进行引用。
