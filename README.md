@@ -2,7 +2,7 @@
 
 ### 1. pom.xml指定了依赖的插件包，并且定义了mybatisGenerator.xml中使用到的一些属性的值
 > 例如：
-```
+```xml
     <properties>
         <jdbcDriver.classpath>E:\Work\tool-lib\mysql-connector-java-5.1.41.jar</jdbcDriver.classpath>
         <mybatis.generator.jdbcDriver>com.mysql.jdbc.Driver</mybatis.generator.jdbcDriver>
