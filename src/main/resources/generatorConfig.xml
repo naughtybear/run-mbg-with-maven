@@ -11,6 +11,10 @@
         <property name="javaFileEncoding" value="UTF-8" />
 
         <plugin type="org.mybatis.generator.plugins.RowBoundsPlugin" />
+        <plugin type="org.mybatis.generator.plugins.RenameExampleClassPlugin" >
+            <property name="searchString" value="Example$" />
+            <property name="replaceString" value="Criteria" />
+        </plugin>
         <plugin type="com.zzh.mbg.plugin.MysqlBatchInsertPlugin" />
         <plugin type="com.zzh.mbg.plugin.MysqlBatchUpdatePlugin" />
         <plugin type="com.zzh.mbg.plugin.MysqlBatchUpdateSelectivePlugin" />
